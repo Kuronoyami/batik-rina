@@ -51,6 +51,7 @@ export const whatsappNumberIsConfigured = Boolean(whatsappNumber)
 export const formatRupiah = (price) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(price)
 
 export const orderWhatsAppUrl = ({ product, size, color, quantity }) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Halo Batik Rina, saya ingin bertanya dan memesan:\\n\\nProduk: ${product.name}\\nUkuran: ${size}\\nWarna: ${color}\\nJumlah: ${quantity}\\nHarga: ${formatRupiah(product.price)}\\nTotal: ${formatRupiah(product.price * quantity)}\\n\\nApakah produk ini tersedia?`)}`
+export const generalWhatsAppUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Halo Batik Rina, saya ingin bertanya tentang koleksi batik.')}`
 
 export const featuredProducts = products.slice(0, 4)
 export const latestProducts = products.filter((product) => product.isNew)
