@@ -34,9 +34,9 @@ export const brandDescription = 'Batik Rina menghadirkan pilihan busana batik ya
 
 export const catalogNote = 'Nama produk, detail bahan, warna, ukuran, stok, dan harga pada katalog ini adalah contoh. Sesuaikan dengan informasi produk Batik Rina sebelum dipublikasikan.'
 
-export const heroImage = '/images/batik-rina-hero.png'
-export const heroTitle = 'Elegansi Batik untuk Setiap Momen'
-export const heroSubtitle = 'Perpaduan motif yang memikat dan gaya modern untuk membuat setiap momen terasa lebih istimewa.'
+export const heroImage = '/images/batik-rina-hero-refresh.png'
+export const heroTitle = 'Batik, bebas cerita.'
+export const heroSubtitle = 'Gaun, kain, set serasi, sampai kemeja—kenakan motif yang paling terasa seperti kamu.'
 export const heroEyebrow = 'KEINDAHAN YANG SELALU RELEVAN'
 
 export const promotionalCopy = 'Satu motif, banyak cara untuk bersinar.'

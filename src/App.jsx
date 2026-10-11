@@ -40,7 +40,7 @@ function BrandMark({ compact = false }) {
   return (
     <a className={`brand-mark${compact ? ' brand-mark--compact' : ''}`} href="#home" aria-label="Batik Rina, kembali ke beranda">
       <span className="brand-mark__name">Batik Rina</span>
-      <span className="brand-mark__tagline">BATIK &amp; LIVING</span>
+      <span className="brand-mark__tagline">BATIK · BUSANA · CERITA</span>
     </a>
   )
 }
@@ -48,15 +48,15 @@ function BrandMark({ compact = false }) {
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const links = [
-    ['Home', '#home'],
-    ['Shop', '#shop'],
-    ['Collections', '#collections'],
-    ['About Us', '#about'],
+    ['Beranda', '#home'],
+    ['Katalog', '#shop'],
+    ['Cerita Motif', '#collections'],
+    ['Tentang', '#about'],
   ]
 
   return (
     <>
-      <div className="announcement-bar">Keindahan batik, untuk setiap cerita.</div>
+      <div className="announcement-bar">Batik lokal, gaya tanpa batas — temukan ceritamu</div>
       <header className="site-header">
         <div className="header-inner page-container">
           <BrandMark />
@@ -177,13 +177,13 @@ function Hero({ onExplore }) {
         <h1>{heroTitle}</h1>
         <p className="hero-description">{heroSubtitle}</p>
         <div className="hero-actions">
-          <button className="button button--dark" type="button" onClick={onExplore}>Lihat Koleksi <ArrowRight aria-hidden="true" /></button>
+          <button className="button button--dark" type="button" onClick={onExplore}>Jelajahi ragam <ArrowRight aria-hidden="true" /></button>
           <a className="button button--text" href="#about">Tentang Kami <ArrowDown aria-hidden="true" /></a>
         </div>
         <div className="hero-caption"><span className="caption-line" />Ragam motif, satu cerita personal</div>
       </div>
       <div className="hero-visual">
-        <img src={heroImage} alt="Model mengenakan busana batik elegan dari Batik Rina" fetchPriority="high" />
+        <img src={heroImage} alt="Model mengenakan gaun batik motif floral bernuansa jade dan coral di halaman tropis" fetchPriority="high" />
         <div className="hero-image-label"><span>01 / 04</span><span>Keindahan dalam detail</span></div>
         <div className="hero-seal" aria-hidden="true"><span>BATIK</span><span>RINA</span><span className="seal-star">✳</span></div>
       </div>
@@ -194,7 +194,7 @@ function Hero({ onExplore }) {
 function CategorySection({ onChoose }) {
   return (
     <section className="category-section page-container" id="categories">
-      <SectionHeading eyebrow="Dibuat untuk setiap momen" title="Temukan gaya Anda" description="Dari keseharian hingga acara istimewa, temukan batik yang paling cocok dengan gaya Anda." />
+      <SectionHeading eyebrow="Dibuat untuk setiap momen" title="Banyak rupa, satu rasa." description="Kain, gaun, busana pasangan, dan kemeja—pilih gaya yang pas untuk harimu." />
       <div className="category-grid">
         {categoryTiles.map((tile, index) => (
           <button type="button" className="category-tile" key={tile.label} onClick={() => onChoose(tile.label)}>
@@ -272,11 +272,11 @@ export default function App() {
       <Header />
       <main>
         <Hero onExplore={() => document.querySelector('#shop')?.scrollIntoView({ behavior: 'smooth' })} />
+        <CategorySection onChoose={chooseCategory} />
         <section className="featured-section page-container" aria-labelledby="featured-title">
           <SectionHeading eyebrow="Pilihan yang istimewa" title="Produk unggulan" titleId="featured-title" description="Pilihan motif dan siluet yang mudah menjadi favorit." action={<a className="text-link section-link" href="#shop">Lihat semua produk <ArrowRight aria-hidden="true" /></a>} />
           <ProductGrid items={featured} onSelect={setSelectedProduct} emptyText="Belum ada produk." />
         </section>
-        <CategorySection onChoose={chooseCategory} />
         <CollectionsSection onChoose={chooseCategory} />
         <section className="promotion-banner page-container">
           <div className="promotion-image"><img src="/images/batik-rina-fabric.png" alt="Detail kain batik dengan motif floral dan parang" loading="lazy" /></div>
