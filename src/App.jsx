@@ -17,11 +17,12 @@ import {
   catalogNote,
   categories,
   categoryTiles,
+  colors,
   collections,
   filterProducts,
-  formatRupiah,
   generalWhatsAppUrl,
   heroImage,
+  storyImage,
   heroSubtitle,
   heroTitle,
   instagramAccountNote,
@@ -29,6 +30,7 @@ import {
   orderWhatsAppUrl,
   productSortOptions,
   products,
+  productImages,
   promotionalCopy,
   promotionalDescription,
   sortProducts,
@@ -105,7 +107,6 @@ function ProductCard({ product, onSelect }) {
           <h3><button type="button" onClick={() => onSelect(product)}>{product.name}</button></h3>
           <p className="product-card__category">{product.category}</p>
         </div>
-        <p className="product-card__price">{formatRupiah(product.price)}</p>
       </div>
     </article>
   )
@@ -131,12 +132,10 @@ function ProductDialog({ product, onClose }) {
         <div className="dialog-content">
           <p className="eyebrow">{product.collection}</p>
           <h2 id="dialog-product-name">{product.name}</h2>
-          <p className="dialog-price">{formatRupiah(product.price)}</p>
           <p className="dialog-description">{product.description}</p>
           <div className="product-facts">
             <p><span>Motif</span><strong>{product.motif}</strong></p>
-            <p><span>Bahan</span><strong>{product.material}</strong></p>
-            <p><span>Ketersediaan</span><strong>{product.stock || 'Konfirmasi melalui WhatsApp'}</strong></p>
+            <p><span>Ketersediaan</span><strong>Konfirmasi melalui WhatsApp</strong></p>
           </div>
           <fieldset className="variant-fieldset">
             <legend>Ukuran <span>{size}</span></legend>
@@ -148,7 +147,7 @@ function ProductDialog({ product, onClose }) {
           <fieldset className="variant-fieldset">
             <legend>Warna <span>{color}</span></legend>
             <div className="color-options">
-              {product.colors.map((option) => <button key={option} className={`color-option${color === option ? ' is-selected' : ''}`} type="button" aria-label={`Pilih warna ${option}`} aria-pressed={color === option} onClick={() => setColor(option)}><span className={`color-dot color-dot--${option.toLowerCase()}`} />{option}{color === option && <Check aria-hidden="true" />}</button>)}
+              {product.colors.map((option) => <button key={option} className={`color-option${color === option ? ' is-selected' : ''}`} type="button" aria-label={`Pilih warna ${option}`} aria-pressed={color === option} onClick={() => setColor(option)}><span className="color-dot" style={{ backgroundColor: colors[option] }} />{option}{color === option && <Check aria-hidden="true" />}</button>)}
             </div>
           </fieldset>
           <div className="dialog-order-row">
@@ -157,7 +156,6 @@ function ProductDialog({ product, onClose }) {
               <span aria-live="polite">{quantity}</span>
               <button type="button" aria-label="Tambah jumlah" disabled={quantity >= 10} onClick={() => setQuantity((current) => Math.min(10, current + 1))}><Plus aria-hidden="true" /></button>
             </div>
-            <p className="dialog-total"><span>Total sementara</span><strong>{formatRupiah(product.price * quantity)}</strong></p>
           </div>
           <a className="button button--dark button--full" href={orderWhatsAppUrl({ product, size, color, quantity })} target="_blank" rel="noreferrer">
             Pesan via WhatsApp <ArrowRight aria-hidden="true" />
@@ -183,8 +181,8 @@ function Hero({ onExplore }) {
         <div className="hero-caption"><span className="caption-line" />Ragam motif, satu cerita personal</div>
       </div>
       <div className="hero-visual">
-        <img src={heroImage} alt="Model mengenakan gaun batik motif floral bernuansa jade dan coral di halaman tropis" fetchPriority="high" />
-        <div className="hero-image-label"><span>01 / 04</span><span>Keindahan dalam detail</span></div>
+        <img src={heroImage} alt="Tunik batik panjang dengan motif geometris biru, cokelat, dan keemasan" fetchPriority="high" />
+        <div className="hero-image-label"><span>01 / 20</span><span>Keindahan dalam detail</span></div>
         <div className="hero-seal" aria-hidden="true"><span>BATIK</span><span>RINA</span><span className="seal-star">✳</span></div>
       </div>
     </section>
@@ -194,7 +192,7 @@ function Hero({ onExplore }) {
 function CategorySection({ onChoose }) {
   return (
     <section className="category-section page-container" id="categories">
-      <SectionHeading eyebrow="Dibuat untuk setiap momen" title="Banyak rupa, satu rasa." description="Kain, gaun, busana pasangan, dan kemeja—pilih gaya yang pas untuk harimu." />
+      <SectionHeading eyebrow="Dibuat untuk setiap momen" title="Banyak rupa, satu rasa." description="Outer, tunik, dan dress batik dalam beragam motif serta pilihan warna." />
       <div className="category-grid">
         {categoryTiles.map((tile, index) => (
           <button type="button" className="category-tile" key={tile.label} onClick={() => onChoose(tile.label)}>
@@ -229,7 +227,7 @@ function CollectionsSection({ onChoose }) {
 function AboutSection() {
   return (
     <section className="about-section page-container" id="about">
-      <div className="about-image"><img src="/images/batik-rina-fabric.png" alt="Detail motif batik dengan warna bumi" loading="lazy" /><span className="about-image__caption">Motif yang bercerita</span></div>
+      <div className="about-image"><img src={storyImage} alt="Atasan batik turquoise dan hijau dengan pola abstrak" loading="lazy" /><span className="about-image__caption">Motif yang bercerita</span></div>
       <div className="about-copy">
         <p className="eyebrow">Tentang Batik Rina</p>
         <h2>Batik yang terasa dekat, di setiap cerita.</h2>
@@ -279,7 +277,7 @@ export default function App() {
         </section>
         <CollectionsSection onChoose={chooseCategory} />
         <section className="promotion-banner page-container">
-          <div className="promotion-image"><img src="/images/batik-rina-fabric.png" alt="Detail kain batik dengan motif floral dan parang" loading="lazy" /></div>
+          <div className="promotion-image"><img src={productImages[5]} alt="Outer batik panjang dengan kombinasi biru, putih, dan oranye" loading="lazy" /></div>
           <div className="promotion-copy"><p className="eyebrow">Koleksi Batik Rina</p><h2>{promotionalCopy}</h2><p>{promotionalDescription}</p><a className="button button--light" href="#shop">Jelajahi koleksi <ArrowRight aria-hidden="true" /></a></div>
           <span className="promotion-index" aria-hidden="true">BR — 01</span>
         </section>

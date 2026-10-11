@@ -1,42 +1,86 @@
-export const categories = ['Semua', 'Kemeja Pria', 'Batik Wanita', 'Batik Couple', 'Batik Modern', 'Batik Formal', 'Koleksi Terbaru']
+export const categories = ['Semua', 'Batik Wanita', 'Batik Modern', 'Batik Formal', 'Koleksi Terbaru']
 
-export const products = [
-  { id: 'laras-senja', name: 'Blus Laras Senja', price: 685000, category: 'Batik Wanita', collection: 'Koleksi Laras', image: '/images/batik-rina-women.png', alt: 'Model mengenakan blus batik bernuansa krem dan cokelat', motif: 'Kawung bunga', material: 'Katun premium', colors: ['Krem', 'Cokelat'], sizes: ['S', 'M', 'L', 'XL'], description: 'Blus bermotif floral dengan siluet modern untuk momen istimewa maupun keseharian.', isNew: true },
-  { id: 'wiratama', name: 'Kemeja Wiratama', price: 745000, category: 'Kemeja Pria', collection: 'Koleksi Pusaka', image: '/images/batik-rina-men.png', alt: 'Model pria mengenakan kemeja batik biru gelap bermotif geometris', motif: 'Parang geometris', material: 'Katun premium', colors: ['Navy', 'Cokelat'], sizes: ['S', 'M', 'L', 'XL'], description: 'Kemeja batik berpotongan rapi dengan motif klasik dan palet warna yang mudah dikenakan.', isNew: true },
-  { id: 'senada', name: 'Set Senada', price: 1290000, category: 'Batik Couple', collection: 'Koleksi Senada', image: '/images/batik-rina-couple.png', alt: 'Pasangan mengenakan busana batik serasi bernuansa bumi', motif: 'Floral kontemporer', material: 'Katun premium', colors: ['Bumi', 'Ivory'], sizes: ['S', 'M', 'L', 'XL'], description: 'Busana pasangan bermotif senada dan berwarna hangat untuk momen kebersamaan.', isNew: false },
-  { id: 'kain-ranup', name: 'Kain Ranup', price: 890000, category: 'Batik Formal', collection: 'Koleksi Pusaka', image: '/images/batik-rina-fabric.png', alt: 'Detail kain batik cokelat dengan motif parang dan floral', motif: 'Parang floral', material: 'Katun tenun', colors: ['Espresso', 'Terracotta'], sizes: ['S', 'M', 'L', 'XL'], description: 'Kain bermotif parang floral dengan detail kaya untuk tampilan formal.', isNew: true },
-  { id: 'atasan-puspa', name: 'Atasan Puspa', price: 725000, category: 'Batik Modern', collection: 'Koleksi Laras', image: '/images/batik-rina-women.png', alt: 'Atasan batik wanita modern dengan motif bunga', motif: 'Puspa klasik', material: 'Katun premium', colors: ['Ivory', 'Terracotta'], sizes: ['S', 'M', 'L', 'XL'], description: 'Atasan bermotif bunga dalam siluet modern yang mudah dipadukan.', isNew: false },
-  { id: 'kemeja-sagara', name: 'Kemeja Sagara', price: 795000, category: 'Kemeja Pria', collection: 'Koleksi Terbaru', image: '/images/batik-rina-men.png', alt: 'Kemeja pria batik navy dengan detail motif warna tembaga', motif: 'Sagara geometris', material: 'Katun tenun', colors: ['Navy', 'Espresso'], sizes: ['S', 'M', 'L', 'XL'], description: 'Kemeja batik bernuansa dalam dengan detail geometris yang elegan.', isNew: true }
+export const productImages = [
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-l2rIDgRfYXg7cee099jZnbJq0r1oRR.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-Bogsopb4Q1EMfvRP5jzAXjGHnDV8kN.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-OxbWzZK5E50BMGsH2612wI2GD2HHud.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-MmgV7zHfvn5aiyeki3p65PorRPYkgj.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-BZImPIwWBBDoM5DmFykM8jXd4MidUD.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-ImXLwGZEwQMMUzazUtaaUrT0gbJsQy.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-Mr1sGtfGjeZ3s0MAGSLu7G7WzFNHxj.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7-Tgp0f9QCanURaoJjWqhJkViOohAjnn.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-hU8Vnl8rb78JZjUJlu8bcQ80uIDYNw.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-P2qtM6yXl04rdgcGkkSMa6iQq627Yi.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-UaNpjkO2jTmGzjNCTFp0K7WmJgliXe.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-6rebTQX18zwZSEBHQR1L19LzWCJKNO.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-mh6oyL1ohEKxmIhUNLgoy0zDolwPiA.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-p1havCmF1d7HIrPmSKxfFA8hrtHp7p.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/15-HUnk2ZHBEmpS319GjKuXcv4lIghWRL.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/16-dInpyEgWJby1S47c0BDpEvBKAUh7C5.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/18-XxifPssKBlRpQe66RHISCedOAHTXCQ.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20-zDbIqUFJmHoeXfigb6vhmzFrrPNct4.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/17-rgEdiQEOBLPS8TwNpbJyHSo0EttewI.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19-I8NvjhYJdHFKAhToVvnun9oXFJxSmu.jpg',
 ]
 
+const productDetails = [
+  { id: 'laras-senja', name: 'Tunik Laras Senja', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Tunik batik panjang dengan motif geometris biru, cokelat, dan keemasan', motif: 'Geometris dan spiral', colors: ['Terracotta', 'Navy'], description: 'Tunik batik panjang dengan paduan motif geometris dan aksen keemasan.', isNew: true },
+  { id: 'pusaka-hijau', name: 'Outer Pusaka Hijau', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik hijau dengan aksen biru dan motif klasik', motif: 'Motif klasik dan garis', colors: ['Hijau', 'Navy'], description: 'Outer batik bernuansa hijau dengan permainan motif dan garis yang berkarakter.', isNew: true },
+  { id: 'rona-merah', name: 'Tunik Rona Merah', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Tunik batik merah dengan motif bunga dan burung', motif: 'Floral dan fauna', colors: ['Merah', 'Terracotta'], description: 'Tunik batik merah dengan ilustrasi floral dan fauna yang menonjol.', isNew: false },
+  { id: 'laras-biru', name: 'Outer Laras Biru', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Outer batik panjang bernuansa biru, turquoise, dan krem', motif: 'Gelombang dan flora', colors: ['Navy', 'Turquoise'], description: 'Outer panjang dengan motif gelombang dan detail batik bernuansa biru.', isNew: true },
+  { id: 'pusaka-samudra', name: 'Outer Pusaka Samudra', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik navy dengan motif turquoise dan krem', motif: 'Motif tradisional dan gelombang', colors: ['Navy', 'Turquoise'], description: 'Outer batik navy dengan motif tradisional dan aksen turquoise.', isNew: false },
+  { id: 'senja-warna', name: 'Outer Senja Warna', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Outer batik panjang dengan kombinasi biru, putih, dan oranye', motif: 'Motif abstrak dan garis', colors: ['Navy', 'Terracotta'], description: 'Outer batik penuh warna dengan kombinasi motif abstrak dan garis tegas.', isNew: true },
+  { id: 'pusaka-navy', name: 'Outer Pusaka Navy', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik navy dan putih dengan aksen garis biru', motif: 'Motif abstrak dan geometris', colors: ['Navy', 'Ivory'], description: 'Outer bernuansa navy dengan komposisi motif abstrak dan aksen kontras.', isNew: false },
+  { id: 'laras-rimba', name: 'Outer Laras Rimba', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Outer batik hijau gelap dengan motif parang krem', motif: 'Parang dan flora', colors: ['Hijau', 'Ivory'], description: 'Outer hijau gelap dengan motif parang yang tampil anggun dan berkarakter.', isNew: true },
+  { id: 'rona-biru', name: 'Tunik Rona Biru', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Tunik batik biru dengan pola kontras hitam, putih, dan turquoise', motif: 'Pola abstrak berlapis', colors: ['Navy', 'Turquoise'], description: 'Tunik batik biru dengan komposisi pola berlapis dan aksen kontras.', isNew: false },
+  { id: 'pusaka-kuning', name: 'Outer Pusaka Kuning', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik biru dengan kerah kuning dan motif geometris', motif: 'Geometris dan garis', colors: ['Navy', 'Kuning'], description: 'Outer batik biru dengan detail kerah kuning yang mencuri perhatian.', isNew: true },
+  { id: 'rona-indigo', name: 'Tunik Rona Indigo', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Tunik batik biru dan ungu dengan pola geometris berwarna', motif: 'Geometris dan garis', colors: ['Navy', 'Ungu'], description: 'Tunik batik bernuansa indigo dengan detail pola dan garis kontras.', isNew: false },
+  { id: 'laras-biru-klasik', name: 'Tunik Laras Biru', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Tunik batik biru dengan motif floral dan aksen hijau', motif: 'Floral dan ornamen', colors: ['Navy', 'Turquoise'], description: 'Tunik batik biru dengan ornamen floral dan aksen hijau.', isNew: true },
+  { id: 'pusaka-citron', name: 'Outer Pusaka Ceria', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik biru terang dengan aksen kuning dan motif cokelat', motif: 'Geometris dan garis', colors: ['Biru', 'Kuning'], description: 'Outer batik biru terang dengan aksen kuning dan motif yang ekspresif.', isNew: false },
+  { id: 'laras-turquoise', name: 'Outer Laras Turquoise', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Outer batik turquoise dengan motif daun dan aksen hijau', motif: 'Daun dan garis', colors: ['Turquoise', 'Hijau'], description: 'Outer bernuansa turquoise dengan pola daun dan detail garis.', isNew: true },
+  { id: 'pusaka-lumut', name: 'Outer Pusaka Lumut', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik hijau dengan motif daun dan aksen keemasan', motif: 'Daun dan garis', colors: ['Hijau', 'Bumi'], description: 'Outer batik hijau dengan motif daun dan aksen warna bumi.', isNew: false },
+  { id: 'rona-toska', name: 'Atasan Rona Toska', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Atasan batik turquoise dan hijau dengan pola abstrak', motif: 'Pola abstrak dan floral', colors: ['Turquoise', 'Hijau'], description: 'Atasan batik dengan pola abstrak dan perpaduan warna turquoise-hijau.', isNew: true },
+  { id: 'rona-malam', name: 'Outer Rona Malam', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Outer batik hitam dan ungu dengan motif geometris', motif: 'Geometris dan floral', colors: ['Hitam', 'Ungu'], description: 'Outer batik bernuansa gelap dengan motif geometris dan aksen ungu.', isNew: false },
+  { id: 'laras-oranye', name: 'Dress Laras Oranye', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Dress batik panjang dengan motif abstrak oranye dan biru', motif: 'Abstrak dan garis', colors: ['Terracotta', 'Navy'], description: 'Dress batik panjang dengan perpaduan warna oranye dan motif kontras.', isNew: true },
+  { id: 'pusaka-merah-biru', name: 'Outer Pusaka Merah Biru', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik biru dengan motif merah dan turquoise', motif: 'Motif tradisional dan garis', colors: ['Navy', 'Merah'], description: 'Outer batik dengan kombinasi biru, merah, dan motif tradisional.', isNew: false },
+  { id: 'laras-aqua', name: 'Outer Laras Aqua', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Outer batik aqua dengan motif putih dan biru navy', motif: 'Gelombang dan geometris', colors: ['Turquoise', 'Navy'], description: 'Outer batik aqua dengan motif gelombang dan aksen navy.', isNew: true },
+]
+
+export const products = productDetails.map((product, index) => ({
+  ...product,
+  image: productImages[index],
+  sizes: ['S', 'M', 'L', 'XL'],
+}))
+
 export const collections = [
-  { name: 'Laras', subtitle: 'Motif lembut, gaya yang anggun', image: '/images/batik-rina-women.png', category: 'Batik Wanita' },
-  { name: 'Pusaka', subtitle: 'Karakter klasik, sentuhan modern', image: '/images/batik-rina-men.png', category: 'Kemeja Pria' },
-  { name: 'Senada', subtitle: 'Momen bersama dalam motif serasi', image: '/images/batik-rina-couple.png', category: 'Batik Couple' }
+  { name: 'Laras', subtitle: 'Motif berkarakter untuk gaya sehari-hari', image: productImages[0], category: 'Batik Wanita' },
+  { name: 'Pusaka', subtitle: 'Ragam detail klasik dalam warna pilihan', image: productImages[7], category: 'Batik Formal' },
+  { name: 'Rona', subtitle: 'Warna dan motif yang ekspresif', image: productImages[17], category: 'Batik Modern' },
 ]
 
 export const categoryTiles = [
-  { label: 'Batik Wanita', image: '/images/batik-rina-women.png' },
-  { label: 'Kemeja Pria', image: '/images/batik-rina-men.png' },
-  { label: 'Batik Couple', image: '/images/batik-rina-couple.png' },
-  { label: 'Batik Formal', image: '/images/batik-rina-fabric.png' }
+  { label: 'Batik Wanita', image: productImages[4] },
+  { label: 'Batik Modern', image: productImages[10] },
+  { label: 'Batik Formal', image: productImages[14] },
+  { label: 'Koleksi Terbaru', image: productImages[18] },
 ]
 
 export const benefits = [
   { number: '01', title: 'Motif berkarakter', description: 'Ragam motif batik dengan detail yang menarik.' },
   { number: '02', title: 'Gaya mudah dikenakan', description: 'Sentuhan modern untuk berbagai suasana.' },
-  { number: '03', title: 'Nyaman dipadukan', description: 'Pilihan busana untuk gaya personal Anda.' }
+  { number: '03', title: 'Nyaman dipadukan', description: 'Pilihan busana untuk gaya personal Anda.' },
 ]
 
-export const brandStory = 'Batik menyimpan keindahan dalam setiap garis, warna, dan motifnya. Batik Rina menghadirkan ragam pilihan batik dengan perhatian pada karakter motif, kenyamanan, dan siluet yang elegan. Untuk momen istimewa maupun hari-hari biasa, biarkan batik menjadi bagian dari cerita Anda.'
+export const brandStory = 'Batik menyimpan keindahan dalam setiap garis, warna, dan motifnya. Batik Rina menghadirkan ragam pilihan batik dengan perhatian pada karakter motif dan siluet yang elegan. Untuk momen istimewa maupun hari-hari biasa, biarkan batik menjadi bagian dari cerita Anda.'
 
-export const brandDescription = 'Batik Rina menghadirkan pilihan busana batik yang memadukan keindahan motif dengan sentuhan modern. Temukan gaya yang terasa istimewa, nyaman, dan dekat dengan keseharian.'
+export const brandDescription = 'Batik Rina menghadirkan pilihan busana batik yang memadukan keindahan motif dengan sentuhan modern. Temukan gaya yang terasa istimewa dan dekat dengan keseharian.'
 
-export const catalogNote = 'Nama produk, detail bahan, warna, ukuran, stok, dan harga pada katalog ini adalah contoh. Sesuaikan dengan informasi produk Batik Rina sebelum dipublikasikan.'
+export const catalogNote = 'Untuk informasi ukuran dan ketersediaan produk, silakan tanyakan langsung kepada Batik Rina.'
 
-export const heroImage = '/images/batik-rina-hero-refresh.png'
+export const heroImage = productImages[0]
+export const storyImage = productImages[15]
 export const heroTitle = 'Batik, bebas cerita.'
-export const heroSubtitle = 'Gaun, kain, set serasi, sampai kemeja—kenakan motif yang paling terasa seperti kamu.'
+export const heroSubtitle = 'Kenakan motif batik penuh warna yang hadir untuk menemani berbagai suasana.'
 export const heroEyebrow = 'KEINDAHAN YANG SELALU RELEVAN'
 
 export const promotionalCopy = 'Satu motif, banyak cara untuk bersinar.'
@@ -48,17 +92,14 @@ export const whatsappContactNote = 'Nomor WhatsApp bisnis belum diatur. Pesan ak
 export const instagramAccountNote = 'Ganti tautan Instagram dengan akun resmi Batik Rina sebelum dipublikasikan.'
 
 export const whatsappNumberIsConfigured = Boolean(whatsappNumber)
-export const formatRupiah = (price) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(price)
 
-export const orderWhatsAppUrl = ({ product, size, color, quantity }) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Halo Batik Rina, saya ingin bertanya dan memesan:\\n\\nProduk: ${product.name}\\nUkuran: ${size}\\nWarna: ${color}\\nJumlah: ${quantity}\\nHarga: ${formatRupiah(product.price)}\\nTotal: ${formatRupiah(product.price * quantity)}\\n\\nApakah produk ini tersedia?`)}`
+export const orderWhatsAppUrl = ({ product, size, color, quantity }) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Halo Batik Rina, saya ingin bertanya dan memesan:\n\nProduk: ${product.name}\nUkuran: ${size}\nWarna: ${color}\nJumlah: ${quantity}\n\nApakah produk ini tersedia?`)}`
 export const generalWhatsAppUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Halo Batik Rina, saya ingin bertanya tentang koleksi batik.')}`
 
 export const featuredProducts = products.slice(0, 4)
 export const latestProducts = products.filter((product) => product.isNew)
 
 export const sortProducts = (items, order) => {
-  if (order === 'price-low') return [...items].sort((a, b) => a.price - b.price)
-  if (order === 'price-high') return [...items].sort((a, b) => b.price - a.price)
   if (order === 'newest') return [...items].sort((a, b) => Number(b.isNew) - Number(a.isNew))
   return items
 }
@@ -66,10 +107,13 @@ export const sortProducts = (items, order) => {
 export const productSortOptions = [
   { value: 'featured', label: 'Pilihan kami' },
   { value: 'newest', label: 'Terbaru' },
-  { value: 'price-low', label: 'Harga terendah' },
-  { value: 'price-high', label: 'Harga tertinggi' }
 ]
 
 export const filterProducts = (items, query, category) => items.filter((product) => (category === 'Semua' || product.category === category || (category === 'Koleksi Terbaru' && product.isNew)) && `${product.name} ${product.motif} ${product.category} ${product.collection}`.toLowerCase().includes(query.trim().toLowerCase()))
 
-export const colors = { Krem: '#e8d8bd', Cokelat: '#694a35', Navy: '#26344a', Ivory: '#f4eee2', Terracotta: '#a75f45', Bumi: '#9a7154', Espresso: '#4c3428' }
+export const colors = {
+  Krem: '#e8d8bd', Cokelat: '#694a35', Navy: '#26344a', Ivory: '#f4eee2',
+  Terracotta: '#a75f45', Bumi: '#9a7154', Espresso: '#4c3428', Hijau: '#416d47',
+  Merah: '#a83036', Turquoise: '#238c93', Kuning: '#dfb633', Biru: '#276aa8',
+  Ungu: '#76528d', Hitam: '#252321',
+}
