@@ -21,6 +21,15 @@ export const productImages = [
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20-zDbIqUFJmHoeXfigb6vhmzFrrPNct4.jpg',
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/17-rgEdiQEOBLPS8TwNpbJyHSo0EttewI.jpg',
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19-I8NvjhYJdHFKAhToVvnun9oXFJxSmu.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/21-a5TkUB35cuOMy05bAWzQfxv2ispue5.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/22-GxcVTeRQnXB3nWqgJPIob7xWVvD4a8.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/23-93Q0wbKxSbMpGvhR7JQWz7DfdMsMrB.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/24-0bjmHqdbPbuHAWH5hL7mS3soFvlQAo.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/25-WzVXhTsKaVtFUrV0ub7XNUWlsIrCVS.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/26-lfnZYKDdDDzsy6RRSLl7yE8cYxriHI.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27-WR2tdfWbzmcBu1BMF0OjRZVQ3J2KD5.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/28-P0VBzRpOLa0dZXIAr0REbyMrB2ZQm8.jpg',
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/29-9I6V8uZj2A0eZ3J2nWnEjefSAJbpzN.jpg',
 ]
 
 const productDetails = [
@@ -44,6 +53,15 @@ const productDetails = [
   { id: 'laras-oranye', name: 'Dress Laras Oranye', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Dress batik panjang dengan motif abstrak oranye dan biru', motif: 'Abstrak dan garis', colors: ['Terracotta', 'Navy'], description: 'Dress batik panjang dengan perpaduan warna oranye dan motif kontras.', isNew: true },
   { id: 'pusaka-merah-biru', name: 'Outer Pusaka Merah Biru', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer batik biru dengan motif merah dan turquoise', motif: 'Motif tradisional dan garis', colors: ['Navy', 'Merah'], description: 'Outer batik dengan kombinasi biru, merah, dan motif tradisional.', isNew: false },
   { id: 'laras-aqua', name: 'Outer Laras Aqua', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Outer batik aqua dengan motif putih dan biru navy', motif: 'Gelombang dan geometris', colors: ['Turquoise', 'Navy'], description: 'Outer batik aqua dengan motif gelombang dan aksen navy.', isNew: true },
+  { id: 'nirmala-navy', name: 'Outer Nirmala Navy', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Outer tanpa lengan panjang berwarna navy dengan motif abstrak biru, putih, dan magenta', motif: 'Abstrak dan paisley', colors: ['Navy', 'Ungu'], description: 'Outer panjang tanpa lengan dengan perpaduan motif abstrak dan paisley yang kontras.', isNew: true },
+  { id: 'puspita-bumi', name: 'Outer Puspita Bumi', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Outer tanpa lengan bermotif daun dan ornamen batik warna cokelat, hitam, dan jingga', motif: 'Daun dan ornamen klasik', colors: ['Hitam', 'Terracotta'], description: 'Outer tanpa lengan dengan motif daun dan warna bumi yang hangat.', isNew: true },
+  { id: 'kembang-warna', name: 'Tunik Kembang Warna', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Tunik batik lengan panjang warna navy dan kuning dengan motif abstrak cerah', motif: 'Abstrak dan geometris', colors: ['Kuning', 'Navy'], description: 'Tunik batik penuh warna dengan aksen kuning dan motif abstrak yang ekspresif.', isNew: true },
+  { id: 'biru-pesisir', name: 'Tunik Biru Pesisir', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Tunik batik biru dengan lengan hitam dan aksen motif cokelat', motif: 'Floral dan garis', colors: ['Navy', 'Biru'], description: 'Tunik biru dengan detail floral dan aksen garis bernuansa cokelat.', isNew: false },
+  { id: 'laras-bumi', name: 'Tunik Laras Bumi', category: 'Batik Formal', collection: 'Koleksi Laras', alt: 'Tunik batik panjang bermotif daun dan spiral dalam warna cokelat, biru, dan krem', motif: 'Daun dan spiral', colors: ['Bumi', 'Navy'], description: 'Tunik panjang dengan motif berlapis dan warna bumi yang memberi kesan anggun.', isNew: false },
+  { id: 'srikandi-zaitun', name: 'Outer Srikandi Zaitun', category: 'Batik Modern', collection: 'Koleksi Rona', alt: 'Outer batik hijau zaitun dengan resleting dan aksen motif jingga serta hitam', motif: 'Ornamen dan abstrak', colors: ['Hijau', 'Terracotta'], description: 'Outer berpotongan modern dengan detail resleting dan motif batik kontras.', isNew: true },
+  { id: 'pusaka-toska', name: 'Tunik Pusaka Toska', category: 'Batik Formal', collection: 'Koleksi Pusaka', alt: 'Tunik batik panjang warna turquoise dengan motif tradisional cokelat dan jingga', motif: 'Motif tradisional dan daun', colors: ['Turquoise', 'Terracotta'], description: 'Tunik panjang bernuansa turquoise dengan sentuhan motif tradisional yang hangat.', isNew: true },
+  { id: 'senja-terracotta', name: 'Dress Senja Terracotta', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Dress batik panjang bermotif garis dan ornamen dalam warna jingga, cokelat, dan biru', motif: 'Garis dan ornamen', colors: ['Terracotta', 'Navy'], description: 'Dress batik dengan susunan motif berlapis dalam perpaduan warna senja.', isNew: true },
+  { id: 'laras-awan', name: 'Blus Laras Awan', category: 'Batik Wanita', collection: 'Koleksi Laras', alt: 'Blus batik lengan panjang warna biru muda dan turquoise dengan motif abstrak jingga', motif: 'Abstrak dan garis', colors: ['Turquoise', 'Biru'], description: 'Blus batik bernuansa cerah dengan motif abstrak dan aksen jingga.', isNew: false },
 ]
 
 export const products = productDetails.map((product, index) => ({
